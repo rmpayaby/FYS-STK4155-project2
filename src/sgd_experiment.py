@@ -3,10 +3,8 @@
 Created on Wed Oct 14 13:24:16 2020
 
 @author: rmbp
-http://binaryplanet.org/2020/04/what-is-regularization-in-machine-learning-ridge-regression-and-lasso-regression/
-
-https://medium.com/@nikhilparmar9/simple-sgd-implementation-in-python-for-linear-regression-on-boston-housing-data-f63fcaaecfb1
 """
+
 import warnings
 warnings.filterwarnings("ignore")
 from sklearn.datasets import load_boston
