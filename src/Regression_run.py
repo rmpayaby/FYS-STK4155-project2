@@ -75,7 +75,7 @@ for run in tqdm(range(runs)):
                         lr_rate=lr_rate,
                         lmbd=lmbd)
     
-    nn.SGD(metric=['r2'],test_data=(X_test_scaled,Y_test),train_data=(X_train_scaled,Y_train))
+    nn.SGD(metric=['MAPE'],test_data=(X_test_scaled,Y_test),train_data=(X_train_scaled,Y_train))
     #r2_test_runs[run,:] = nn.r2_test
     #r2_train_runs[run,:] = nn.r2_train
     #r2_end_test[run] = nn.r2_test[-1]
