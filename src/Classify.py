@@ -67,7 +67,6 @@ class Classify():
     
     _softmax = lambda self, x: np.exp(x)/np.sum(np.exp(x),
                                                 axis=1, keepdims=True)
-
     _sigmoid = lambda self, x: 1/(1+np.exp(-x))
     _sigmoid_deriv = lambda self, x: self._sigmoid(x)*(1 - self._sigmoid(x))
 
