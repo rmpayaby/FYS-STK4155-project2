@@ -38,7 +38,6 @@ class Regression():
         Returns the appropriate activation function for the output layer given string from initialization.
         """
 
-        if prim
         if self.o_a == 'linear':
             if deriv:
                 return 1
