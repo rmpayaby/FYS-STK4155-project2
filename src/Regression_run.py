@@ -40,7 +40,7 @@ y = y_prev + np.random.normal(m,s)
 hidden_neuron_list = [5,5,5]
 epochs = 500
 runs = 30
-lr_rate = 0.01
+lr_rate = 0.001
 lmbd = 0.001
 
 # Calling the class function containing activaion and cost function
