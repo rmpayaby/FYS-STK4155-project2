@@ -76,17 +76,17 @@ for run in tqdm(range(runs)):
                         lmbd=lmbd)
     
     nn.SGD(metric=['r2'],test_data=(X_test_scaled,Y_test),train_data=(X_train_scaled,Y_train))
-    r2_test_runs[run,:] = nn.r2_test
-    r2_train_runs[run,:] = nn.r2_train
-    r2_end_test[run] = nn.r2_test[-1]
-    r2_end_train[run] = nn.r2_train[-1]
+    #r2_test_runs[run,:] = nn.r2_test
+    #r2_train_runs[run,:] = nn.r2_train
+    #r2_end_test[run] = nn.r2_test[-1]
+    #r2_end_train[run] = nn.r2_train[-1]
     
     
     """Used to run the MAPE-values"""
-    #MAPE_test_runs[run,:]= nn.MAPE_test
-    #MAPE_train_runs[run,:] = nn.MAPE_train
-    #MAPE_test_end[run] = nn.MAPE_test[-1]
-    #MAPE_train_end[run] = nn.MAPE_train[-1]
+    MAPE_test_runs[run,:]= nn.MAPE_test
+    MAPE_train_runs[run,:] = nn.MAPE_train
+    MAPE_test_end[run] = nn.MAPE_test[-1]
+    MAPE_train_end[run] = nn.MAPE_train[-1]
 
 r2_mean_test = np.mean(r2_end_test)
 r2_mean_train = np.mean(r2_end_train)
@@ -94,18 +94,18 @@ r2_mean_train = np.mean(r2_end_train)
 MAPE_mean_test = np.mean(MAPE_test_end); MAPE_mean_train = np.mean(MAPE_train_end)
 fig,ax = plt.subplots()
 for i in range(runs):
-    ax.plot(r2_train_runs[i,:],color='black',label='train, mean = {:.2f}'.format(r2_mean_train))
-    ax.plot(r2_test_runs[i,:],color='green',label='test, mean = {:.2f}'.format(r2_mean_test))
-    #ax.plot(MAPE_train_runs[i,:],color='black',label='train, mean = {:.2f}'.format(MAPE_mean_train))
-    #ax.plot(MAPE_test_runs[i,:],color='green',label='test, mean = {:.2f}'.format(MAPE_mean_test))
+    #ax.plot(r2_train_runs[i,:],color='black',label='train, mean = {:.2f}'.format(r2_mean_train))
+    #ax.plot(r2_test_runs[i,:],color='green',label='test, mean = {:.2f}'.format(r2_mean_test))
+    ax.plot(MAPE_train_runs[i,:],color='black',label='train, mean = {:.2f}'.format(MAPE_mean_train))
+    ax.plot(MAPE_test_runs[i,:],color='green',label='test, mean = {:.2f}'.format(MAPE_mean_test))
     if i == 0:
         ax.legend(loc=4)
-ax.set_ylabel('R2 score')
+ax.set_ylabel('MAPE score')
 ax.set_xlabel('Epochs')
-ax.set_ylim(0,1) # 0 to 1 if R2
+ax.set_ylim(0,20) # 0 to 1 if R2
 fig.tight_layout()
 
-plt.title("R2 of oil data")
+plt.title("MAPE of oil data")
 print('epochs',epochs,'runs',runs)
 print('lr_rate',lr_rate,' lambda ',lmbd,' neuron list ',hidden_neuron_list)
 
@@ -142,7 +142,7 @@ for i, lr_rate in enumerate(eta_vals):
 
         print("Learning rate  = ", lr_rate)
         print("Lambda = ", lmbd)
-        print("Accuracy score on test set: ", r2_score(Y_test,test_predict))
+        print("R2 score on test set: ", r2_score(Y_test,test_predict))
         print()
 
 
