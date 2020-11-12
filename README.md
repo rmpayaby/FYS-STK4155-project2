@@ -14,7 +14,7 @@ The following codes are relevant for each setting:
 
 Neural network regression: neural_net_regression.py, Regression.py, Regression_run.py
 
-Neural network classification: Classify.py, /Classify_run.py
+Neural network classification: Classify.py, Classify_run.py
 
 Logistic regression: LogReg.py, logreg_execution.py
 
