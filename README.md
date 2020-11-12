@@ -18,5 +18,4 @@ Neural network classification: <strong>Classify.py</strong>, <strong>Classify_ru
 
 Logistic regression: <strong>LogReg.py</strong>, <strong>logreg_execution.py</strong>
 
-Sample codes of neural networks using Keras and Scikit can be found in the folder testing_code_with_scikit_keras.
-
+Sample codes of neural networks using Keras and Scikit can be found in the folder testing_code_with_scikit_keras inside src
