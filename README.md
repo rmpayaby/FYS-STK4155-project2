@@ -7,16 +7,16 @@ Data sets for the regression and classification problem are stored in the data_s
 
 All codes used are to be found in the src-folder. Since I've proposed my own data sets, OLS and Ridge regression from project 1 was reused to pinpoint what to expect during the regression analysis of the oil price data set. 
 
-A simple SGD-algorithm prior to applying it to neural networks can be found on ### sgd_experiment.py ###.
+A simple SGD-algorithm prior to applying it to neural networks can be found on sgd_experiment.py.
 To show the distribution of features in a data set, use distrib_data.py
 
 The following codes are relevant for each setting:
 
-Neural network regression: ####neural_net_regression.py, ####Regression.py, ####Regression_run.py
+Neural network regression: neural_net_regression.py, Regression.py, Regression_run.py
 
-Neural network classification: ####Classify.py, ####Classify_run.py
+Neural network classification: Classify.py, Classify_run.py
 
-Logistic regression: ####LogReg.py, ####logreg_execution.py
+Logistic regression: LogReg.py, <strong>logreg_execution.py</strong>
 
 Sample codes of neural networks using Keras and Scikit can be found in the folder testing_code_with_scikit_keras.
 
