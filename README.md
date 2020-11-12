@@ -1,9 +1,9 @@
 # FYS-STK4155-project2
-This repository contains the codes used in project 2
+This repository contains the codes used in project 2. 
 
 Sample runs are to be found in the folder plots_for_sample_runs 
 
-Data sets for the regression and classification problem are stored in the data_sets-folder. 
+Data sets for the regression and classification problem are stored in the data_sets-folder. The data sets I've utilized in the project includes historical data of oil prices provided by the International Monetary Fund for regression problems, and a survey of approximately 1000 people in Siyaya county, Kenya about their living conditions and status of depression.
 
 All codes used are to be found in the src-folder.
 
